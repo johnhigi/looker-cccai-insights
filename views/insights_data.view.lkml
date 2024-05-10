@@ -1,4 +1,3 @@
-
 view: insights_data {
   sql_table_name: @{INSIGHTS_TABLE} ;;
   view_label: "1: Conversations"
