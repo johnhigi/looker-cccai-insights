@@ -1,8 +1,16 @@
 project_name: "ccai_insights"
 
-# # Use local_dependency: To enable referencing of another project
-# # on this instance with include: statements
-#
-# local_dependency: {
-#   project: "name_of_other_project"
-# }
+constant: CONNECTION_NAME {
+  value: "pawait_bigquery" #CCAI Demo Data
+  export: override_optional
+}
+
+constant: INSIGHTS_TABLE {
+  value: "development_pawait_insights" #CCAI Demo Data
+  export: override_optional
+}
+
+constant: UNNEST_TABLE {
+  value: "development_insights" #CCAI Demo Data
+  export: override_optional
+}
