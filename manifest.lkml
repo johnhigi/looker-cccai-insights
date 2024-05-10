@@ -6,7 +6,7 @@ constant: CONNECTION_NAME {
 }
 
 constant: INSIGHTS_TABLE {
-  value: "development_pawait_insights" #CCAI Demo Data
+  value: "development_insights" #CCAI Demo Data
   export: override_optional
 }
 
