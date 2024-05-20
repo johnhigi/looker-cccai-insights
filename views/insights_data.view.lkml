@@ -69,7 +69,7 @@ view: insights_data {
     type: string
     primary_key: yes
     description: "Name of the conversation resource."
-    sql: ${TABLE}.conversationName ;;
+    sql: ${TABLE}.conversationName;;
     link: {
       label: "Conversation Lookup Dashboard"
       url: "/dashboards-next/insights_demo::conversation_lookup?Conversation+Name={{ value}}"
