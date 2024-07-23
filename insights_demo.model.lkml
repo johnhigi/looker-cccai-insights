@@ -13,17 +13,6 @@ persist_with: insights_default_datagroup
 
 explore: insights_data {
   label: "CCAI Insights"
-  join: insights_data__summary {
-    view_label: "4: Summary"
-    sql: LEFT JOIN UNNEST(${insights_data.summary}) as insights_data__summary ;;
-    relationship: one_to_many
-  }
-
-  join: insights_data__words {
-    view_label: "4: Words"
-    sql: LEFT JOIN UNNEST(${insights_data.words}) as insights_data__words ;;
-    relationship: one_to_many
-  }
 
   join: insights_data__labels {
     view_label: "1: Conversations"
@@ -36,11 +25,16 @@ explore: insights_data {
     sql: LEFT JOIN UNNEST(${insights_data.topics}) as insights_data__topics ;;
     relationship: one_to_many
   }
+  join: human_agent_turns {
+    view_label: "1: Conversations"
+    relationship: one_to_one
+    sql_on: ${insights_data.conversation_name} = ${human_agent_turns.conversation_name} ;;
+  }
 
-  join: insights_data__entities {
-    view_label: "3: Entities"
-    sql: LEFT JOIN UNNEST(${insights_data.entities}) as insights_data__entities ;;
-    relationship: one_to_many
+  join: daily_facts {
+    view_label: "1: Conversations"
+    relationship: many_to_one
+    sql_on: ${insights_data.load_date}=${daily_facts.load_date} AND ${insights_data.type} = ${daily_facts.conversation_type};;
   }
 
   join: insights_data__sentences {
@@ -82,16 +76,16 @@ explore: insights_data {
           and ${insights_data__sentences.created_raw} = ${sentence_turn_number.created_raw};;
   }
 
-  join: human_agent_turns {
-    view_label: "1: Conversations"
-    relationship: one_to_one
-    sql_on: ${insights_data.conversation_name} = ${human_agent_turns.conversation_name} ;;
+  join: insights_data__entities {
+    view_label: "3: Entities"
+    sql: LEFT JOIN UNNEST(${insights_data.entities}) as insights_data__entities ;;
+    relationship: one_to_many
   }
 
-  join: daily_facts {
-    view_label: "1: Conversations"
-    relationship: many_to_one
-    sql_on: ${insights_data.load_date}=${daily_facts.load_date} AND ${insights_data.type} = ${daily_facts.conversation_type};;
+  join: insights_data__words {
+    view_label: "4: Words"
+    sql: LEFT JOIN UNNEST(${insights_data.words}) as insights_data__words ;;
+    relationship: one_to_many
   }
 
 }
