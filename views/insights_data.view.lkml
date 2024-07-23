@@ -33,6 +33,11 @@ view: insights_data {
     sql: ${TABLE}.automateQualityEvaluationScore ;;
   }
 
+  dimension: conversation_summary {
+    type: string
+    description: "Conversation summary."
+    sql: ${TABLE}.conversationSummary ;;
+  }
   dimension: agent_sentiment_score {
     group_label: "Sentiment"
     type: number
@@ -592,16 +597,6 @@ view: insights_data__topics {
 
   set: topic_detail {
     fields:[name, score]
-  }
-}
-
-view: insights_data__summary {
-  dimension: text {
-    label: "summary "
-    group_label: "Summary"
-    type: string
-    description: "Conversation Summary"
-    sql: ${TABLE}.text ;;
   }
 }
 
