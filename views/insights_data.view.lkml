@@ -30,7 +30,7 @@ view: insights_data {
     group_label: "Sentiment"
     type: number
     description: "calculated automated quality evaluation score"
-    sql: ${TABLE}.automateQualityEvaluationScore ;;
+    sql: ${TABLE}.automatedQualityEvaluationScore ;;
   }
 
   dimension: conversation_summary {
