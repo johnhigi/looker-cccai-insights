@@ -49,7 +49,7 @@ view: insights_data {
     type: number
     description: "Percentage of the conversation with the agent speaking."
     sql: ${TABLE}.agentSpeakingPercentage ;;
-    value_format_name: percent_2
+    # value_format_name: percent_2
   }
 
   dimension: audio_file_uri {
@@ -81,7 +81,7 @@ view: insights_data {
     type: number
     description: "Percentage of the conversation with the client speaking."
     sql: ${TABLE}.clientSpeakingPercentage ;;
-    value_format_name: percent_2
+    # value_format_name: percent_2
   }
 
   dimension: conversation_name {
