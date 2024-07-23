@@ -6,10 +6,10 @@ view: insights_data {
     type: string
     description: "The user-provided identifier for the human agent who handled the conversation."
     sql: ${TABLE}.agentId ;;
-    link: {
-      label: "Agent Performance Dashboard"
-      url: "/dashboards-next/insights_demo::agent_performance?Agent+ID={{ value}}&Import+Date={{ _filters['insights_data.load_date'] | url_encode }}&Start+Date={{ _filters['insights_data.start_date'] | url_encode }}&Type={{ _filters['insights_data.type'] | url_encode }}&Client+Sentiment+Category={{ _filters['insights_data.client_sentiment_category'] | url_encode }}"
-    }
+    # link: {
+    #   label: "Agent Performance Dashboard"
+    #   url: "/dashboards-next/insights_demo::agent_performance?Agent+ID={{ value}}&Import+Date={{ _filters['insights_data.load_date'] | url_encode }}&Start+Date={{ _filters['insights_data.start_date'] | url_encode }}&Type={{ _filters['insights_data.type'] | url_encode }}&Client+Sentiment+Category={{ _filters['insights_data.client_sentiment_category'] | url_encode }}"
+    # }
   }
 
   dimension: agent_sentiment_magnitude {
