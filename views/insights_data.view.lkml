@@ -19,6 +19,20 @@ view: insights_data {
     sql: ${TABLE}.agentSentimentMagnitude ;;
   }
 
+  dimension: conversation_sentiment_score {
+    group_label: "Sentiment"
+    type: number
+    description: "A non-negative number from zero to infinity that represents the abolute magnitude of the agent sentiment regardless of score."
+    sql: ${TABLE}.conversationSentimentScore ;;
+  }
+
+  dimension: automated_quality_evaluation_score {
+    group_label: "Sentiment"
+    type: number
+    description: "calculated automated quality evaluation score"
+    sql: ${TABLE}.automateQualityEvaluationScore ;;
+  }
+
   dimension: agent_sentiment_score {
     group_label: "Sentiment"
     type: number
@@ -70,10 +84,10 @@ view: insights_data {
     primary_key: yes
     description: "Name of the conversation resource."
     sql: ${TABLE}.conversationName;;
-    link: {
-      label: "Conversation Lookup Dashboard"
-      url: "/dashboards-next/insights_demo::conversation_lookup?Conversation+Name={{ value}}"
-    }
+    # link: {
+    #   label: "Conversation Lookup Dashboard"
+    #   url: "/dashboards-next/insights_demo::conversation_lookup?Conversation+Name={{ value}}"
+    # }
   }
 
   dimension: day {
@@ -133,7 +147,7 @@ view: insights_data {
   }
 
   dimension: sentences {
-    hidden: yes
+    # hidden: yes
     sql: ${TABLE}.sentences ;;
   }
 
