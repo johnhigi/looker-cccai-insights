@@ -147,7 +147,7 @@ view: insights_data {
   }
 
   dimension: sentences {
-    # hidden: yes
+    hidden: yes
     sql: ${TABLE}.sentences ;;
   }
 
@@ -205,6 +205,11 @@ view: insights_data {
   dimension: topics {
     hidden: yes
     sql: ${TABLE}.issues ;;
+  }
+
+  dimension: summary {
+    hidden: yes
+    sql: ${TABLE}.latestSummary ;;
   }
 
   dimension: transcript {
@@ -587,6 +592,16 @@ view: insights_data__topics {
 
   set: topic_detail {
     fields:[name, score]
+  }
+}
+
+view: insights_data__summary {
+  dimension: name {
+    label: "summary "
+    group_label: "Summary"
+    type: string
+    description: "Conversation Summary"
+    sql: ${TABLE}.text ;;
   }
 }
 
