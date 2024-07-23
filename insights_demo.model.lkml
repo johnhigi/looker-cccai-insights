@@ -13,6 +13,12 @@ persist_with: insights_default_datagroup
 
 explore: insights_data {
   label: "CCAI Insights"
+  join: insights_data__summary {
+    view_label: "4: Summary"
+    sql: LEFT JOIN UNNEST(${insights_data.summary}) as insights_data__summary ;;
+    relationship: one_to_many
+  }
+
   join: insights_data__words {
     view_label: "4: Words"
     sql: LEFT JOIN UNNEST(${insights_data.words}) as insights_data__words ;;

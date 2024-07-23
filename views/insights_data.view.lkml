@@ -596,7 +596,7 @@ view: insights_data__topics {
 }
 
 view: insights_data__summary {
-  dimension: name {
+  dimension: text {
     label: "summary "
     group_label: "Summary"
     type: string
