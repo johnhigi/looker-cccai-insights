@@ -89,10 +89,10 @@ view: insights_data {
     primary_key: yes
     description: "Name of the conversation resource."
     sql: ${TABLE}.conversationName;;
-    # link: {
-    #   label: "Conversation Lookup Dashboard"
-    #   url: "/dashboards-next/insights_demo::conversation_lookup?Conversation+Name={{ value}}"
-    # }
+    link: {
+      label: "Conversation Lookup Dashboard"
+      url: "/dashboards-next/insights_demo::gemini_conversation_analysis?Conversation+Name={{ value}}"
+    }
   }
 
   dimension: day {
