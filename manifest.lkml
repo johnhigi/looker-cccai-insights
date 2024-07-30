@@ -6,11 +6,11 @@ constant: CONNECTION_NAME {
 }
 
 constant: INSIGHTS_TABLE {
-  value: "gemini_insights_copy" #CCAI Demo Data
+  value: "gemini_insights" #CCAI Demo Data
   export: override_optional
 }
 
 constant: UNNEST_TABLE {
-  value: "gemini_insights_copy" #CCAI Demo Data
+  value: "gemini_insights" #CCAI Demo Data
   export: override_optional
 }
