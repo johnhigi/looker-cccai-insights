@@ -1,5 +1,5 @@
 ---
-- dashboard: gemini_agent_analysis
+- dashboard: pawait_agent_analysis
   title: Gemini Agent Analysis
   layout: newspaper
   preferred_viewer: dashboards-next

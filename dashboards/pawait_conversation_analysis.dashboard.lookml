@@ -1,5 +1,5 @@
 ---
-- dashboard: gemini_conversation_analysis
+- dashboard: pawait_conversation_analysis
   title: Gemini Conversation Analysis
   layout: newspaper
   preferred_viewer: dashboards-next

@@ -1,5 +1,5 @@
 ---
-- dashboard: gemini_center_performance_analysis
+- dashboard: pawait_center_performance_analysis
   title: Gemini Center Performance Analysis
   layout: newspaper
   preferred_viewer: dashboards-next
