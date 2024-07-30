@@ -4,12 +4,12 @@ connection: "@{CONNECTION_NAME}"
 include: "/views/**/*.view" # Include All Views
 include: "/dashboards/*.dashboard.lookml" # Include All Dashboards
 
-# datagroup: insights_default_datagroup {
-#   # sql_trigger: SELECT MAX(id) FROM etl_log;;
-#   max_cache_age: "5 minutes"
-# }
+datagroup: insights_default_datagroup {
+  sql_trigger: SELECT MAX(id) FROM etl_log;;
+  max_cache_age: "5 seconds"
+}
 
-# persist_with: insights_default_datagroup
+persist_with: insights_default_datagroup
 
 explore: insights_data {
   label: "CCAI Insights"
