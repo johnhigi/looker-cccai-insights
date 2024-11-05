@@ -39,11 +39,11 @@ constant: CONNECTION_NAME {
 }
 
 constant: INSIGHTS_TABLE {
-  value: "abacus_pawait_io" #CCAI Demo Data
+  value: "abacus_pawait_io_v2" #CCAI Demo Data
   export: override_optional
 }
 
 constant: UNNEST_TABLE {
-  value: "abacus_pawait_io" #CCAI Demo Data
+  value: "abacus_pawait_io_v2" #CCAI Demo Data
   export: override_optional
 }
