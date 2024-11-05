@@ -602,8 +602,6 @@ view: insights_data__topics {
 
 view: insights_data__latestSummary {
   dimension: text {
-    label: "Summary Text"
-    group_label: "Summary"
     type: string
     description: "Summary Text."
     sql: ${TABLE}.text ;;
