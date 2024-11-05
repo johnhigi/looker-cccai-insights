@@ -212,7 +212,7 @@ view: insights_data {
     sql: ${TABLE}.issues ;;
   }
 
-  dimension: summary {
+  dimension: latestSummary {
     hidden: yes
     sql: ${TABLE}.latestSummary ;;
   }
@@ -597,6 +597,16 @@ view: insights_data__topics {
 
   set: topic_detail {
     fields:[name, score]
+  }
+}
+
+view: insights_data__latestSummary {
+  dimension: text {
+    label: "Summary Text"
+    group_label: "Summary"
+    type: string
+    description: "Summary Text."
+    sql: ${TABLE}.text ;;
   }
 }
 

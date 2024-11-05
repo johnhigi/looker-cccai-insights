@@ -88,4 +88,9 @@ explore: insights_data {
     relationship: one_to_many
   }
 
+  join: insights_data__latestSummary {
+    view_label: "5: latest Summary"
+    sql: LEFT JOIN UNNEST(${insights_data.latestSummary}) as insights_data__latestSummary ;;
+    relationship: one_to_many
+  }
 }
