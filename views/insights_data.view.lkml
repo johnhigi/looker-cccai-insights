@@ -608,6 +608,35 @@ view: insights_data__latestSummary {
   }
 }
 
+# view: insights_data__latestSummary {
+#   derived_table: {
+#     sql: SELECT
+#           insights_data.latestSummary.text AS text
+#       FROM
+#           abacus_pawait_io_v2 AS insights_data
+#       GROUP BY
+#           text
+#       ORDER BY
+#           text ;;
+#   }
+
+#   measure: count {
+#     type: count
+#     drill_fields: [detail*]
+#   }
+
+#   dimension: text {
+#     type: string
+#     sql: ${TABLE}.text ;;
+#   }
+
+#   set: detail {
+#     fields: [
+#       text
+#     ]
+#   }
+# }
+
 view: insights_data__entities {
   dimension: name {
     type: string
