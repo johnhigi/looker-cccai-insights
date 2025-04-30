@@ -23,12 +23,12 @@ constant: CONNECTION_NAME {
 }
 
 constant: INSIGHTS_TABLE {
-  value: "freshdesk" #CCAI Demo Data
+  value: "looker_demo" #CCAI Demo Data
   export: override_optional
 }
 
 constant: UNNEST_TABLE {
-  value: "freshdesk" #CCAI Demo Data
+  value: "looker_demo" #CCAI Demo Data
   export: override_optional
 }
 
