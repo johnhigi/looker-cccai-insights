@@ -1,49 +1,11 @@
-project_name: "ccai_insights"
+project_name: "ccai-insights"
 
-#Gemini
-# constant: CONNECTION_NAME {
-#   value: "gemini_analysis" #CCAI Demo Data
-#   export: override_optional
-# }
-
-# constant: INSIGHTS_TABLE {
-#   value: "gemini_insights" #CCAI Demo Data
-#   export: override_optional
-# }
-
-# constant: UNNEST_TABLE {
-#   value: "gemini_insights" #CCAI Demo Data
-#   export: override_optional
-# }
-
-#CCAI
-constant: CONNECTION_NAME {
-  value: "pawait_demos" #CCAI Demo Data
+constant: db_connection_name {
+  value: "pawait_demos"
   export: override_optional
 }
 
-constant: INSIGHTS_TABLE {
-  value: "demo_insights" #CCAI Demo Data
+constant: insights_table {
+  value: "demo_insights"
   export: override_optional
 }
-
-constant: UNNEST_TABLE {
-  value: "demo_insights" #CCAI Demo Data
-  export: override_optional
-}
-
-# #CCAI
-# constant: CONNECTION_NAME {
-#   value: "abacus_pawait_io" #CCAI Demo Data
-#   export: override_optional
-# }
-
-# constant: INSIGHTS_TABLE {
-#   value: "abacus_pawait_io_v2" #CCAI Demo Data
-#   export: override_optional
-# }
-
-# constant: UNNEST_TABLE {
-#   value: "abacus_pawait_io_v2" #CCAI Demo Data
-#   export: override_optional
-# }
