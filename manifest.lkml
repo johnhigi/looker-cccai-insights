@@ -18,17 +18,17 @@ project_name: "ccai_insights"
 
 #CCAI
 constant: CONNECTION_NAME {
-  value: "gemini_analysis" #CCAI Demo Data
+  value: "pawait_demos" #CCAI Demo Data
   export: override_optional
 }
 
 constant: INSIGHTS_TABLE {
-  value: "looker_demo" #CCAI Demo Data
+  value: "demo_insights" #CCAI Demo Data
   export: override_optional
 }
 
 constant: UNNEST_TABLE {
-  value: "looker_demo" #CCAI Demo Data
+  value: "demo_insights" #CCAI Demo Data
   export: override_optional
 }
 
